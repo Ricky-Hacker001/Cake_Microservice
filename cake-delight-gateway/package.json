@@ -1,0 +1,13 @@
+{
+  "name": "cake-delight-gateway",
+  "description": "Express Gateway Instance Bootstraped from Command Line",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express-gateway": "^1.16.11",
+    "winston": "^3.19.0"
+  }
+}

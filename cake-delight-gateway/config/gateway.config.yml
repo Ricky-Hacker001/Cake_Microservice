@@ -1,0 +1,161 @@
+http:
+  port: 3004
+admin:
+  port: 9876
+  host: 0.0.0.0
+
+apiEndpoints:
+  cakes:
+    host: '*'
+    paths:
+      - '/cakes'
+      - '/cakes/*'
+  cakeImages:
+    host: '*'
+    paths:
+      - '/cake-images'
+      - '/cake-images/*'
+  baskets:
+    host: '*'
+    paths:
+      - '/baskets'
+      - '/baskets/*'
+  orders:
+    host: '*'
+    paths:
+      - '/orders'
+      - '/orders/*'
+  ratings:
+    host: '*'
+    paths:
+      - '/ratings'
+      - '/ratings/*'
+  notifications:
+    host: '*'
+    paths:
+      - '/notifications'
+      - '/notifications/*'
+
+serviceEndpoints:
+  cakeCatalog:
+    url: http://cake-catalog:3000
+  orderService:
+    url: http://order-service:3001
+  notificationService:
+    url: http://notification-service:3002
+  ratingService:
+    url: http://rating-service:3003
+
+policies:
+  - basic-auth
+  - cors
+  - expression
+  - key-auth
+  - log
+  - oauth2
+  - proxy
+  - rate-limit
+
+pipelines:
+  cakePipeline:
+    apiEndpoints:
+      - cakes
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+              allowedHeaders: '*'
+              credentials: false
+      - log:
+          - action:
+              message: 'Cake API request'
+      - proxy:
+          - action:
+              serviceEndpoint: cakeCatalog
+              stripPath: false
+
+  cakeImagePipeline:
+    apiEndpoints:
+      - cakeImages
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,OPTIONS'
+              allowedHeaders: '*'
+      - log:
+          - action:
+              message: 'Cake Image API request'
+      - proxy:
+          - action:
+              serviceEndpoint: cakeCatalog
+              stripPath: false
+
+  orderPipeline:
+    apiEndpoints:
+      - orders
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+              allowedHeaders: '*'
+      - log:
+          - action:
+              message: 'Order API request'
+      - proxy:
+          - action:
+              serviceEndpoint: orderService
+              stripPath: false
+
+  basketPipeline:
+    apiEndpoints:
+      - baskets
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+              allowedHeaders: '*'
+      - log:
+          - action:
+              message: 'Basket API request'
+      - proxy:
+          - action:
+              serviceEndpoint: orderService
+              stripPath: false
+
+  ratingPipeline:
+    apiEndpoints:
+      - ratings
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+              allowedHeaders: '*'
+      - log:
+          - action:
+              message: 'Rating API request'
+      - proxy:
+          - action:
+              serviceEndpoint: ratingService
+              stripPath: false
+
+  notificationPipeline:
+    apiEndpoints:
+      - notifications
+    policies:
+      - cors:
+          - action:
+              origin: '*'
+              methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS'
+              allowedHeaders: '*'
+      - log:
+          - action:
+              message: 'Notification API request'
+      - proxy:
+          - action:
+              serviceEndpoint: notificationService
+              stripPath: false

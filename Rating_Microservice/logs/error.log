@@ -1,0 +1,11 @@
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.089Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.199Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:45:26.243Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.264Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.307Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:45:26.315Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:46:36.969Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:45.584Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:45.647Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:49.843Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:49.894Z"}

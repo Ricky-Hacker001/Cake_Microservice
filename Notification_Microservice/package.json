@@ -1,0 +1,22 @@
+{
+  "name": "notification_microservice",
+  "version": "1.0.0",
+  "description": "Notification Microservice for Cake Delight",
+  "license": "ISC",
+  "author": "Ricky",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "amqplib": "^2.0.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "mongoose": "^9.9.1",
+    "nodemailer": "^9.0.5",
+    "nodemon": "^3.1.14",
+    "winston": "^3.19.0"
+  }
+}

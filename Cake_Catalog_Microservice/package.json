@@ -1,0 +1,22 @@
+{
+  "name": "cake_catalog_microservice",
+  "version": "1.0.0",
+  "description": "Maintain cake product information such as name, description, category, price, availability, and image reference. Provide APIs to list cakes and retrieve details of a selected cake. Support filtering by product name, category, and price range.",
+  "license": "ISC",
+  "author": "Ricky",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "mongodb": "^7.5.0",
+    "mongoose": "^9.9.1",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.14",
+    "winston": "^3.19.0"
+  }
+}

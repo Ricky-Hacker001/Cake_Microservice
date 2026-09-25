@@ -1,0 +1,89 @@
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:50:55.759Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:51:10.751Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:51:10.777Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:51:20.821Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:51:20.841Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:52:18.118Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:52:18.167Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:52:39.124Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:52:39.133Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:52:39.141Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:53:11.855Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:53:11.866Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:53:11.878Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:53:20.434Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:53:20.443Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:53:20.455Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:53:46.832Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:53:46.845Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:53:46.855Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:54:06.770Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:54:06.794Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:54:06.818Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:54:23.686Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:54:23.700Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:54:23.712Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:55:07.332Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:55:07.344Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:55:07.357Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:55:20.911Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:55:20.919Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:55:20.929Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:55:47.597Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:55:47.607Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:55:47.618Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:56:05.320Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:56:05.340Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:56:05.361Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:56:23.095Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:56:23.106Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:56:23.114Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:56:44.659Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:56:44.672Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:56:44.685Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:57:05.601Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:57:05.610Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:57:05.619Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:57:24.843Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:57:24.855Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:57:24.866Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:57:46.346Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:57:46.362Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:57:46.377Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:58:20.256Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:58:20.267Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:58:20.278Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:59:07.235Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:59:07.246Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:59:07.258Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:59:31.553Z"}
+{"level":"info","message":"RabbitMQ consumer waiting for messages","queue":"order_completed_queue","timestamp":"2026-08-12T18:59:31.562Z"}
+{"level":"info","message":"Notification Microservice started","port":3002,"timestamp":"2026-08-12T18:59:31.573Z"}
+{"count":1,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:01:09.509Z"}
+{"duration":"81ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:09.533Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":1,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:01:09.556Z"}
+{"duration":"19ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:09.561Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":0,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:01:09.582Z"}
+{"duration":"16ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:09.588Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}
+{"count":0,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:01:09.611Z"}
+{"duration":"7ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:09.612Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}
+{"customerName":"Ricky F","email":"ricky.nuetrex@gmial.com","event":"ORDER_COMPLETED","level":"info","message":"ORDER_COMPLETED event received","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:20.054Z","totalPrice":400}
+{"error":"savedNotification is not defined","level":"error","message":"Failed to process ORDER_COMPLETED event","timestamp":"2026-08-12T19:01:20.105Z"}
+{"count":2,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:01:25.245Z"}
+{"duration":"13ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:25.249Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":2,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:01:25.274Z"}
+{"duration":"28ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:25.284Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":1,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:01:25.516Z"}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:25.518Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}
+{"count":1,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:01:25.539Z"}
+{"duration":"12ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:25.542Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}
+{"email":"ricky.nuetrex@gmial.com","level":"info","message":"Notification marked as read","notificationId":"6a7cc300cf059553808c5b1b","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:27.881Z"}
+{"duration":"28ms","ip":"::1","level":"info","message":"HTTP Request","method":"PATCH","statusCode":200,"timestamp":"2026-08-12T19:01:27.884Z","url":"/notifications/user/6a7cc300cf059553808c5b1b/read"}
+{"count":2,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:08:03.189Z"}
+{"duration":"12ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:08:03.191Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":2,"email":"ricky.nuetrex@gmial.com","level":"info","message":"User notifications retrieved","timestamp":"2026-08-12T19:08:03.219Z"}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:08:03.222Z","url":"/notifications/user/ricky.nuetrex%40gmial.com"}
+{"count":0,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:08:03.277Z"}
+{"duration":"12ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:08:03.279Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}
+{"count":0,"email":"ricky.nuetrex@gmial.com","level":"info","message":"Unread notifications retrieved","timestamp":"2026-08-12T19:08:03.325Z"}
+{"duration":"6ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:08:03.327Z","url":"/notifications/user/ricky.nuetrex%40gmial.com/unread"}

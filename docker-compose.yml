@@ -1,0 +1,124 @@
+services:
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - mongodb_data:/data/db
+
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+
+  cake-catalog:
+    build:
+      context: ./Cake_Catalog_Microservice
+    container_name: cake-catalog
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URL: mongodb://root:root@mongodb:27017/catalog_db?authSource=admin
+    depends_on:
+      - mongodb
+
+
+  order-service:
+    build:
+      context: ./Order_Microservice
+    container_name: order-service
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      MONGO_URI: mongodb://root:root@mongodb:27017/order_microservice?authSource=admin
+      RABBITMQ_URL: amqp://rabbitmq:5672
+      CAKE_CATALOG_URL: http://cake-catalog:3000
+    depends_on:
+      mongodb:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+      cake-catalog:
+        condition: service_started
+
+
+  notification-service:
+    build:
+      context: ./Notification_Microservice
+    container_name: notification-service
+    restart: unless-stopped
+    ports:
+      - "3002:3002"
+    environment:
+      MONGO_URL: mongodb://root:root@mongodb:27017/notification_db?authSource=admin
+      RABBITMQ_URL: amqp://rabbitmq:5672
+    depends_on:
+      mongodb:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+
+
+  rating-service:
+    build:
+      context: ./Rating_Microservice
+    container_name: rating-service
+    restart: unless-stopped
+    ports:
+      - "3003:3003"
+    environment:
+      MONGO_URL: mongodb://root:root@mongodb:27017/rating_db?authSource=admin
+      CAKE_CATALOG_URL: http://cake-catalog:3000
+    depends_on:
+      - mongodb
+      - cake-catalog
+
+
+  gateway:
+    build:
+      context: ./cake-delight-gateway
+    container_name: cake-gateway
+    restart: unless-stopped
+    ports:
+      - "3004:3004"
+      - "9876:9876"
+    depends_on:
+      - cake-catalog
+      - order-service
+      - notification-service
+      - rating-service
+
+
+  frontend:
+    build:
+      context: ./cake-delight-frontend
+    container_name: cake-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - gateway
+
+
+volumes:
+  mongodb_data:

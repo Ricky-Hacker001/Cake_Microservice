@@ -1,0 +1,59 @@
+const mongo = require('mongoose');
+
+const orderSchema = new mongo.Schema({
+    customerName:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    items:[
+        {
+            cakeId:{
+                type:String,
+                required:true
+            },
+            name:{
+                type:String,
+                required:true
+            },
+            price:{
+                type:Number,
+                required:true,
+                min:0
+            },
+            quantity:{
+                type:Number,
+                required:true,
+                min:1,
+                default:1
+            },
+            imageUrl:{
+                type:String,
+                required:true
+            }
+        }
+    ],
+    totalPrice:{
+        type:Number,
+        required:true,
+        min:0
+    },
+    status:{
+        type:String,
+        enum:["Pending","Processing","Completed","Cancelled"],
+        default:"Pending"
+    }   
+})
+
+module.exports = mongo.model('Order', orderSchema);

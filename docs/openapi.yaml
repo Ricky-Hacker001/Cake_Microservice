@@ -1,0 +1,327 @@
+openapi: 3.0.3
+info:
+  title: Cake Delight API
+  version: 1.0.0
+  description: API specification for the Cake Delight cloud-native microservices application.
+servers:
+  - url: http://localhost:3004
+    description: Local Express Gateway
+  - url: http://MINIKUBE_IP:31958
+    description: Minikube Express Gateway
+tags:
+  - name: Cake Catalog
+  - name: Cake Images
+  - name: Basket
+  - name: Orders
+  - name: Ratings & Reviews
+  - name: Notifications
+
+paths:
+  /cakes:
+    get:
+      tags: [Cake Catalog]
+      summary: Get cakes
+      parameters:
+        - {name: name, in: query, schema: {type: string}}
+        - {name: category, in: query, schema: {type: string}}
+        - {name: minPrice, in: query, schema: {type: number}}
+        - {name: maxPrice, in: query, schema: {type: number}}
+        - {name: availability, in: query, schema: {type: boolean}}
+      responses:
+        '200': {description: Cakes retrieved successfully}
+        '500': {description: Internal server error}
+    post:
+      tags: [Cake Catalog]
+      summary: Add a new cake
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CakeForm'
+      responses:
+        '201': {description: Cake created successfully}
+        '400': {description: Validation error}
+        '500': {description: Internal server error}
+
+  /cakes/{id}:
+    parameters:
+      - {name: id, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Cake Catalog]
+      summary: Get cake by ID
+      responses:
+        '200': {description: Cake retrieved successfully}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+    put:
+      tags: [Cake Catalog]
+      summary: Update a cake
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/CakeUpdateForm'
+      responses:
+        '200': {description: Cake updated successfully}
+        '400': {description: Validation error}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+    delete:
+      tags: [Cake Catalog]
+      summary: Delete a cake
+      responses:
+        '204': {description: Cake deleted}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+
+  /cake-images/{filename}:
+    parameters:
+      - {name: filename, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Cake Images]
+      summary: Get a cake image
+      responses:
+        '200': {description: Image returned}
+        '404': {description: Image not found}
+
+  /baskets:
+    get:
+      tags: [Basket]
+      summary: Basket service status
+      responses:
+        '200': {description: Basket route status}
+
+  /baskets/items:
+    post:
+      tags: [Basket]
+      summary: Add a cake to basket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddBasketItem'
+      responses:
+        '200': {description: Cake added to basket}
+        '400': {description: Validation error or unavailable cake}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+
+  /baskets/{basketId}:
+    parameters:
+      - {name: basketId, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Basket]
+      summary: Get basket by ID
+      responses:
+        '200': {description: Basket returned}
+        '404': {description: Basket not found}
+        '500': {description: Internal server error}
+
+  /baskets/{basketId}/items/{cakeId}:
+    parameters:
+      - {name: basketId, in: path, required: true, schema: {type: string}}
+      - {name: cakeId, in: path, required: true, schema: {type: string}}
+    put:
+      tags: [Basket]
+      summary: Update basket item quantity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [quantity]
+              properties:
+                quantity: {type: integer, minimum: 1}
+      responses:
+        '200': {description: Basket updated}
+        '400': {description: Invalid quantity}
+        '404': {description: Basket or cake not found}
+        '500': {description: Internal server error}
+    delete:
+      tags: [Basket]
+      summary: Remove cake from basket
+      responses:
+        '202': {description: Cake removed}
+        '404': {description: Basket or cake not found}
+        '500': {description: Internal server error}
+
+  /orders/checkout:
+    post:
+      tags: [Orders]
+      summary: Place an order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckoutRequest'
+      responses:
+        '200': {description: Order placed}
+        '400': {description: Validation error or empty basket}
+        '404': {description: Basket not found}
+        '500': {description: Internal server error}
+
+  /orders:
+    get:
+      tags: [Orders]
+      summary: Get all orders
+      responses:
+        '200': {description: Orders returned}
+        '500': {description: Internal server error}
+
+  /orders/{orderId}:
+    parameters:
+      - {name: orderId, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Orders]
+      summary: Get order by ID
+      responses:
+        '200': {description: Order returned}
+        '404': {description: Order not found}
+        '500': {description: Internal server error}
+
+  /orders/{orderId}/status:
+    parameters:
+      - {name: orderId, in: path, required: true, schema: {type: string}}
+    patch:
+      tags: [Orders]
+      summary: Update order status
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status:
+                  type: string
+                  enum: [Pending, Processing, Completed, Cancelled]
+      responses:
+        '200': {description: Status updated}
+        '400': {description: Invalid status}
+        '404': {description: Order not found}
+        '500': {description: Internal server error}
+
+  /ratings:
+    post:
+      tags: [Ratings & Reviews]
+      summary: Submit a rating
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RatingRequest'
+      responses:
+        '201': {description: Rating created}
+        '400': {description: Validation error}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+
+  /ratings/cake/{cakeId}:
+    parameters:
+      - {name: cakeId, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Ratings & Reviews]
+      summary: Get cake ratings
+      responses:
+        '200': {description: Ratings returned}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+
+  /ratings/cake/{cakeId}/average:
+    parameters:
+      - {name: cakeId, in: path, required: true, schema: {type: string}}
+    get:
+      tags: [Ratings & Reviews]
+      summary: Get average rating
+      responses:
+        '200': {description: Average returned}
+        '404': {description: Cake not found}
+        '500': {description: Internal server error}
+
+  /notifications/user/{email}:
+    parameters:
+      - {name: email, in: path, required: true, schema: {type: string, format: email}}
+    get:
+      tags: [Notifications]
+      summary: Get customer notifications
+      responses:
+        '200': {description: Notifications returned}
+        '400': {description: Invalid email}
+        '500': {description: Internal server error}
+
+  /notifications/user/{email}/unread:
+    parameters:
+      - {name: email, in: path, required: true, schema: {type: string, format: email}}
+    get:
+      tags: [Notifications]
+      summary: Get unread notifications
+      responses:
+        '200': {description: Unread notifications returned}
+        '400': {description: Invalid email}
+        '500': {description: Internal server error}
+
+  /notifications/user/{notificationId}/read:
+    parameters:
+      - {name: notificationId, in: path, required: true, schema: {type: string}}
+    patch:
+      tags: [Notifications]
+      summary: Mark notification as read
+      responses:
+        '200': {description: Notification marked as read}
+        '400': {description: Invalid notification ID}
+        '404': {description: Notification not found}
+        '500': {description: Internal server error}
+
+components:
+  schemas:
+    CakeForm:
+      type: object
+      required: [name, description, category, price, availability, image]
+      properties:
+        name: {type: string}
+        description: {type: string}
+        category: {type: string}
+        price: {type: number, exclusiveMinimum: 0}
+        availability: {type: boolean}
+        image: {type: string, format: binary}
+    CakeUpdateForm:
+      type: object
+      required: [name, description, category, price, availability]
+      properties:
+        name: {type: string}
+        description: {type: string}
+        category: {type: string}
+        price: {type: number, exclusiveMinimum: 0}
+        availability: {type: boolean}
+        image: {type: string, format: binary}
+    AddBasketItem:
+      type: object
+      required: [cakeId]
+      properties:
+        basketId: {type: string}
+        cakeId: {type: string}
+        quantity: {type: integer, minimum: 1, default: 1}
+    CheckoutRequest:
+      type: object
+      required: [basketId, customerName, email, address, phone]
+      properties:
+        basketId: {type: string}
+        customerName: {type: string}
+        email: {type: string, format: email}
+        address: {type: string, minLength: 5}
+        phone: {type: string}
+    RatingRequest:
+      type: object
+      required: [cakeId, customerName, rating]
+      properties:
+        cakeId: {type: string}
+        customerName: {type: string}
+        rating: {type: integer, minimum: 1, maximum: 5}
+        review: {type: string, maxLength: 500}

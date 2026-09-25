@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cake-catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cake-catalog
+  template:
+    metadata:
+      labels:
+        app: cake-catalog
+    spec:
+      containers:
+        - name: cake-catalog
+          image: ricky_capstoneproject_cohort1-cake-catalog:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URL
+              value: "mongodb://root:root@mongodb:27017/catalog_db?authSource=admin"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "300m"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cake-catalog
+spec:
+  selector:
+    app: cake-catalog
+  ports:
+    - port: 3000
+      targetPort: 3000
+  type: ClusterIP

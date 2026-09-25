@@ -1,0 +1,59 @@
+{"level":"info","message":"Rating Microservice started","port":3003,"timestamp":"2026-08-12T18:45:25.412Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:45:26.059Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.089Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:45:26.142Z","totalRatings":3}
+{"duration":"192ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:45:26.161Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.199Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:45:26.243Z"}
+{"duration":"198ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:45:26.256Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46/average"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.264Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:45:26.276Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:45:26.288Z","totalRatings":3}
+{"duration":"69ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:45:26.292Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"connect ECONNREFUSED ::1:3000; connect ECONNREFUSED 127.0.0.1:3000","level":"error","message":"Cake catalog request failed","timestamp":"2026-08-12T18:45:26.307Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:45:26.315Z"}
+{"duration":"43ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:45:26.319Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46/average"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:46:18.024Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:46:18.070Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:46:18.099Z","totalRatings":0}
+{"duration":"101ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:46:18.104Z","url":"/ratings/cake/6a7866722a75fcd324f3c455"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:46:18.170Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:46:18.209Z","totalRatings":0}
+{"duration":"100ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:46:18.228Z","url":"/ratings/cake/6a7866722a75fcd324f3c455"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"No ratings found for cake","timestamp":"2026-08-12T18:46:18.238Z"}
+{"duration":"216ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:46:18.240Z","url":"/ratings/cake/6a7866722a75fcd324f3c455/average"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:46:18.261Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"No ratings found for cake","timestamp":"2026-08-12T18:46:18.299Z"}
+{"duration":"43ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:46:18.304Z","url":"/ratings/cake/6a7866722a75fcd324f3c455/average"}
+{"cakeId":"6a7866722a75fcd324f3c455","customerName":"b","level":"info","message":"Rating submitted successfully","rating":5,"ratingId":"6a7cbf8ce3a03b50095e432c","timestamp":"2026-08-12T18:46:36.889Z"}
+{"duration":"68ms","ip":"::1","level":"info","message":"HTTP Request","method":"POST","statusCode":201,"timestamp":"2026-08-12T18:46:36.892Z","url":"/ratings"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:46:36.920Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:46:36.928Z","totalRatings":1}
+{"duration":"21ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T18:46:36.931Z","url":"/ratings/cake/6a7866722a75fcd324f3c455"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:46:36.953Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:46:36.969Z"}
+{"duration":"18ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:46:36.971Z","url":"/ratings/cake/6a7866722a75fcd324f3c455/average"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:59:45.534Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:59:45.551Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:59:45.557Z","totalRatings":1}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:59:45.560Z","url":"/ratings/cake/6a7866722a75fcd324f3c455"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:45.584Z"}
+{"duration":"60ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:59:45.595Z","url":"/ratings/cake/6a7866722a75fcd324f3c455/average"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:59:45.603Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:59:45.619Z"}
+{"cakeId":"6a7866722a75fcd324f3c455","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:59:45.628Z","totalRatings":1}
+{"duration":"58ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:59:45.634Z","url":"/ratings/cake/6a7866722a75fcd324f3c455"}
+{"cakeId":"6a7866722a75fcd324f3c455","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:45.647Z"}
+{"duration":"31ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:59:45.650Z","url":"/ratings/cake/6a7866722a75fcd324f3c455/average"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:59:49.797Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:59:49.802Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:59:49.809Z","totalRatings":3}
+{"duration":"30ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:59:49.814Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:49.843Z"}
+{"duration":"46ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:59:49.847Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46/average"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Fetching cake ratings","timestamp":"2026-08-12T18:59:49.850Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Cake ratings retrieved","timestamp":"2026-08-12T18:59:49.861Z","totalRatings":3}
+{"duration":"32ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:59:49.869Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Calculating average cake rating","timestamp":"2026-08-12T18:59:49.871Z"}
+{"cakeId":"6a77823e0f81d46bf62e8c46","error":"averageRating is not defined","level":"error","message":"Failed to calculate average rating","timestamp":"2026-08-12T18:59:49.894Z"}
+{"duration":"28ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":500,"timestamp":"2026-08-12T18:59:49.899Z","url":"/ratings/cake/6a77823e0f81d46bf62e8c46/average"}

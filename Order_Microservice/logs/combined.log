@@ -1,0 +1,48 @@
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:33:11.396Z"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T18:37:11.724Z"}
+{"level":"info","message":"Order Microservice started","port":3001,"timestamp":"2026-08-12T18:37:11.741Z"}
+{"count":7,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T18:59:40.250Z"}
+{"duration":"121ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T18:59:40.302Z","url":"/orders"}
+{"count":7,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T18:59:40.325Z"}
+{"duration":"29ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T18:59:40.335Z","url":"/orders"}
+{"duration":"105ms","ip":"::1","level":"info","message":"HTTP Request","method":"POST","statusCode":500,"timestamp":"2026-08-12T18:59:51.489Z","url":"/baskets/items"}
+{"duration":"39ms","ip":"::1","level":"info","message":"HTTP Request","method":"POST","statusCode":500,"timestamp":"2026-08-12T18:59:53.484Z","url":"/baskets/items"}
+{"level":"info","message":"RabbitMQ connected","timestamp":"2026-08-12T19:00:55.959Z"}
+{"level":"info","message":"Order Microservice started","port":3001,"timestamp":"2026-08-12T19:00:55.972Z"}
+{"basketId":"6a7cc2e8a9d48986926e7aff","cakeId":"6a77823e0f81d46bf62e8c46","level":"info","message":"Cake added to basket","quantity":1,"timestamp":"2026-08-12T19:00:56.535Z"}
+{"duration":"130ms","ip":"::1","level":"info","message":"HTTP Request","method":"POST","statusCode":200,"timestamp":"2026-08-12T19:00:56.548Z","url":"/baskets/items"}
+{"basketId":"6a7cc2e8a9d48986926e7aff","level":"info","message":"Basket","timestamp":"2026-08-12T19:00:56.954Z"}
+{"duration":"75ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:00:56.966Z","url":"/baskets/6a7cc2e8a9d48986926e7aff"}
+{"basketId":"6a7cc2e8a9d48986926e7aff","level":"info","message":"Basket","timestamp":"2026-08-12T19:00:57.024Z"}
+{"duration":"69ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:00:57.043Z","url":"/baskets/6a7cc2e8a9d48986926e7aff"}
+{"customerName":"Ricky F","email":"ricky.nuetrex@gmial.com","level":"info","message":"Order placed successfully","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:04.846Z","totalPrice":400}
+{"basketId":"6a7cc2e8a9d48986926e7aff","level":"info","message":"Basket deleted after checkout","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:04.856Z"}
+{"duration":"45ms","ip":"::1","level":"info","message":"HTTP Request","method":"POST","statusCode":200,"timestamp":"2026-08-12T19:01:04.859Z","url":"/orders/checkout"}
+{"level":"info","message":"Order retrieved","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:05.002Z"}
+{"duration":"22ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:05.023Z","url":"/orders/6a7cc2f0a9d48986926e7b04"}
+{"level":"info","message":"Order retrieved","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:05.036Z"}
+{"duration":"24ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:05.059Z","url":"/orders/6a7cc2f0a9d48986926e7b04"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:07.628Z"}
+{"duration":"16ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:07.631Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:07.656Z"}
+{"duration":"25ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:07.666Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:15.860Z"}
+{"duration":"19ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:15.870Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:15.907Z"}
+{"duration":"13ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:15.912Z","url":"/orders"}
+{"level":"info","message":"Order status updated","orderId":"6a7cc2f0a9d48986926e7b04","status":"Completed","timestamp":"2026-08-12T19:01:20.024Z"}
+{"customerName":"Ricky F","email":"ricky.nuetrex@gmial.com","event":"ORDER_COMPLETED","level":"info","message":"ORDER_COMPLETED event published","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:20.044Z","totalPrice":400}
+{"customerName":"Ricky F","email":"ricky.nuetrex@gmial.com","level":"info","message":"ORDER_COMPLETED event published","orderId":"6a7cc2f0a9d48986926e7b04","timestamp":"2026-08-12T19:01:20.044Z","totalPrice":400}
+{"duration":"39ms","ip":"::1","level":"info","message":"HTTP Request","method":"PATCH","statusCode":200,"timestamp":"2026-08-12T19:01:20.046Z","url":"/orders/6a7cc2f0a9d48986926e7b04/status"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:31.838Z"}
+{"duration":"10ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":200,"timestamp":"2026-08-12T19:01:31.842Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:01:31.864Z"}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:01:31.872Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:08:01.409Z"}
+{"duration":"9ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:08:01.411Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:08:01.442Z"}
+{"duration":"15ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:08:01.450Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:16:19.029Z"}
+{"duration":"17ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:16:19.033Z","url":"/orders"}
+{"count":8,"level":"info","message":"All orders retrieved","timestamp":"2026-08-12T19:16:19.120Z"}
+{"duration":"44ms","ip":"::1","level":"info","message":"HTTP Request","method":"GET","statusCode":304,"timestamp":"2026-08-12T19:16:19.150Z","url":"/orders"}

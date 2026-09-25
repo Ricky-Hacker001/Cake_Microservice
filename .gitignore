@@ -1,0 +1,78 @@
+# ==============================
+# Node.js dependencies
+# ==============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tgz
+
+# ==============================
+# Environment / secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Build / generated files
+# ==============================
+dist/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# ==============================
+# Logs / runtime files
+# ==============================
+logs/
+*.log
+output.txt
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Temporary files
+# ==============================
+tmp/
+temp/
+*.tmp
+
+# ==============================
+# Docker
+# ==============================
+.docker/
+
+# ==============================
+# Local databases / data
+# ==============================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================
+# Certificates / private keys
+# ==============================
+*.pem
+*.key
+*.crt
+
+# ==============================
+# Misc
+# ==============================
+*.zip
